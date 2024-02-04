@@ -1,0 +1,66 @@
+/* Since we're already importing Google Fonts in the App's global style, we don't need to do it again. */
+
+/* Education Container to match the styling of AboutMe container */
+.education-container {
+    background: #fff; /* Consistent with AboutMe */
+    border-radius: 5px; /* Consistent with AboutMe */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Consistent with AboutMe */
+    padding: 40px; /* Increased padding for spacious layout */
+    margin: 30px auto; /* Consistent with AboutMe */
+    font-family: 'Roboto', sans-serif; /* Consistent with App */
+    color: #333; /* Consistent with App */
+  }
+  
+  .education-container h2, .education-container h3 {
+    color: #333; /* Consistent with App */
+    font-weight: 700; /* Bold font weight for titles */
+    margin-bottom: 20px; /* Spacing after titles */
+  }
+  
+  .education-container h2 {
+    font-size: 2.5rem; /* Larger font size for the main title */
+    text-align: center; /* Center align the main title */
+  }
+  
+  .education-container h3 {
+    font-size: 2rem; /* Large font size for subheadings */
+    margin-top: 20px; /* Space before subheadings */
+    border-bottom: 2px solid #61dafb; /* Consistent style with the AboutMe component */
+    padding-bottom: 5px; /* Spacing under subheadings */
+  }
+  
+  /* List styles for coursework */
+  .education-container ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+    margin-top: 10px; /* Spacing before the list starts */
+  }
+  
+  .education-container ul li:before {
+    content: '▹'; /* Consistent with App */
+    color: #61dafb; /* Highlight color for list item bullets */
+    font-weight: bold; /* Bold for the bullet points */
+    margin-right: 5px; /* Spacing between bullet and text */
+  }
+  
+  .education-container ul li {
+    margin-bottom: 10px; /* Spacing between list items */
+    font-weight: 500; /* Medium font weight for readability */
+  }
+  
+  /* Media query for responsive adjustments */
+  @media (max-width: 768px) {
+    .education-container {
+      margin: 20px; /* Smaller margin on smaller screens */
+      padding: 20px; /* Smaller padding on smaller screens */
+    }
+  
+    .education-container h2 {
+      font-size: 2rem; /* Smaller font size for the main title on smaller screens */
+    }
+  
+    .education-container h3 {
+      font-size: 1.5rem; /* Smaller font size for subheadings on smaller screens */
+    }
+  }
+  

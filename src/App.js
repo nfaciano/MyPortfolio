@@ -1,24 +1,38 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
+import AboutMe from './components/AboutMe';
+import Education from './components/Education';
+import Projects from './components/Projects';
+import ContactMe from './components/ContactMe';
+import Skills from './components/Skills'; // Import the Skills component
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <header className="App-header">
+          <nav>
+            <ul className="nav-links">
+              <li><NavLink to="/" end className={({ isActive }) => isActive ? 'active' : undefined}>About Me</NavLink></li>
+              <li><NavLink to="/education" className={({ isActive }) => isActive ? 'active' : undefined}>Education</NavLink></li>
+              <li><NavLink to="/projects" className={({ isActive }) => isActive ? 'active' : undefined}>Projects</NavLink></li>
+              <li><NavLink to="/skills" className={({ isActive }) => isActive ? 'active' : undefined}>Skills</NavLink></li> {/* Add Skills NavLink */}
+              <li><NavLink to="/contact" className={({ isActive }) => isActive ? 'active' : undefined}>Contact Me</NavLink></li>
+            </ul>
+          </nav>
+        </header>
+        <main className="App-content">
+          <Routes>
+            <Route path="/" element={<AboutMe />} end />
+            <Route path="/education" element={<Education />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/skills" element={<Skills />} /> {/* Add Skills Route */}
+            <Route path="/contact" element={<ContactMe />} />
+          </Routes>
+        </main>
+      </div>
+    </Router>
   );
 }
 

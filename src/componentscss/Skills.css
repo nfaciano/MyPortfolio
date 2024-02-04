@@ -1,0 +1,65 @@
+/* Import Google Fonts (Already Imported) */
+
+/* Skills page styling consistent with previous design */
+.skills-container {
+  background: #fff; /* White background for a clean look */
+  border-radius: 5px; /* Slightly rounded corners for a modern look */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  padding: 40px; /* Increased padding for spacious layout */
+  margin-top: 30px; /* Distance from the top of the page */
+  font-family: 'Roboto', sans-serif; /* Consistent font family */
+  color: #333; /* Consistent text color */
+}
+
+.title {
+  font-size: 2.5rem; /* Larger font size for the title */
+  color: #333; /* Text color consistent with the design */
+  margin-bottom: 20px; /* Space after the title */
+  text-align: center; /* Center the title */
+  font-weight: 700; /* Bold font weight for the title */
+}
+
+.skills-section {
+  margin-bottom: 30px; /* Space after each skills section */
+}
+
+.skills-category {
+  font-size: 1.8rem; /* Size increase for visibility */
+  color: #27ae60; /* Color to stand out and align with 'About Me' headings */
+  margin-bottom: 15px; /* Space below the category heading */
+  font-weight: 600; /* Consistent weight with subheadings */
+}
+
+.skills-list {
+  list-style-type: none; /* Remove default list styling */
+  padding-left: 0; /* Remove default list padding */
+}
+
+.skill {
+  background: #f9f9f9; /* Light grey background for each skill for contrast */
+  padding: 10px 20px; /* More padding for a touch of sophistication */
+  margin-bottom: 10px; /* Space between skills for readability */
+  border-radius: 5px; /* Soft edges for a modern look */
+  font-weight: 500; /* Medium font weight for skill items */
+  color: #333; /* Text color consistent with the design */
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.skill:hover {
+  background: #e8e8e8; /* Darker grey on hover for interactive feel */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .skills-container {
+    padding: 20px; /* Less padding for smaller screens */
+  }
+
+  .title {
+    font-size: 2rem; /* Smaller title on mobile */
+  }
+
+  .skills-category {
+    font-size: 1.5rem; /* Adjust category heading size on mobile */
+  }
+}

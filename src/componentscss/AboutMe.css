@@ -1,58 +1,96 @@
-/* About Me Container */
+/* AboutMe.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Color palette and fonts for consistency */
+:root {
+    --primary-color: #5c6bc0; /* A soothing shade of blue */
+    --accent-color: #ffca28; /* A vibrant yellow for highlighting elements */
+    --text-color: #333; /* A dark grey for strong readability */
+    --background-color: #f8f8f8; /* A light grey to soothe the eyes */
+    --text-light: #666; /* A lighter grey for less emphasis */
+    --heading-font: 'Roboto', sans-serif;
+    --background-secondary: #daeaf6; /* A lighter blue for section backgrounds */
+    --font-light: 300; /* Lighter font-weight */
+    --font-regular: 400; /* Regular font-weight */
+    --font-bold: 700; /* Bold font-weight for headings */
+}
+
+/* Apply the font-family */
+body {
+    font-family: var(--heading-font);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Global styling adjustments for a consistent look */
+h1, h2, h3, p {
+    margin-bottom: 20px; /* Consistent bottom margin for all text elements */
+}
+
+/* Style for the about me container */
 .about-me-container {
-    background: #fff;
+    max-width: 800px;
+    margin: 50px auto; /* Increase top and bottom margin */
+    background: var(--background-light);
+    padding: 50px; /* Increase padding for more space inside the container */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adjusted for a deeper effect */
+    color: var(--text-color);
+}
+
+/* Headings */
+.about-me-container h2 {
+    color: var(--primary-color);
+    text-align: center;
+    font-weight: var(--font-bold);
+    margin-bottom: 25px; /* More space after main heading */
+}
+
+.about-me-container h3 {
+    color: var(--accent-color);
+    font-weight: var(--font-bold);
+    text-align: center;
+}
+
+/* Paragraph text styling */
+.about-me-container p {
+    font-weight: var(--font-light);
+    text-align: justify;
+    color: var(--text-light); /* Lighter color for a friendlier tone */
+    line-height: 1.8; /* Increased line height for better readability */
+    margin-bottom: 25px; /* Increase space between paragraphs */
+
+}
+
+/* Carousel section styling */
+.carousel-container {
+    margin-top: 20px;
+    margin-bottom: 30px; /* More space surrounding carousel for focus */
+}
+
+/* Individual section backgrounds for visual interest */
+.intro-section, .travels-section, .culinary-section, .closing-remarks {
+    background: var(--background-secondary);
+    padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    padding: 40px; /* More padding for a spacious layout */
-    margin-top: 30px; /* Distance from the top of the page */
-  }
-  
-  .about-me-container h2 {
-    color: #333;
-    font-size: 2.5rem; /* Larger font size for the title */
-    font-weight: 700; /* Bold font weight for the title */
-    margin-bottom: 20px; /* Space after the title */
-    text-align: center; /* Center the title */
-  }
-  
-  .about-me-container p {
-    text-align: left; /* Left-aligned text for easy reading */
-    color: #666; /* Softer color for the text */
-    margin-bottom: 20px; /* Space between paragraphs */
-  }
-  
-  .about-me-container h3 {
-    font-size: 2rem; /* Large font size for subheadings */
-    font-weight: 700; /* Bold font weight for subheadings */
-    color: #333;
-    margin-bottom: 10px; /* Space before the section content */
-  }
-  
-  /* Responsive Design Adjustments */
-  @media (max-width: 768px) {
-    .App-header {
-      width: 100%;
-      height: auto;
-      position: relative;
-      box-shadow: none;
-    }
-  
-    .App-content {
-      margin-left: 0;
-      padding: 20px;
-    }
-  
+    margin-bottom: 20px; /* Added space between sections */
+}
+
+/* Responsive design for smaller devices */
+@media (max-width: 768px) {
     .about-me-container {
-      margin-top: 20px;
-      padding: 20px;
+        padding: 20px;
     }
-  
-    .about-me-container h2 {
-      font-size: 2rem;
-    }
-  
+
+    .about-me-container h2,
     .about-me-container h3 {
-      font-size: 1.5rem;
+        font-size: 1.8rem; /* Smaller font size for smaller screens */
     }
-  }
-  
+
+    /* Adjust padding and margins for a cleaner layout on small screens */
+    .intro-section, .travels-section, .culinary-section, .closing-remarks {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+}

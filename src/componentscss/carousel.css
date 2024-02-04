@@ -1,5 +1,5 @@
 .carousel {
-  max-width: 60%;
+  max-width: 100%;
   margin: 20px auto;
   overflow: hidden;
   position: relative;
@@ -39,8 +39,29 @@
   box-sizing: border-box;
   padding: 0 5px; /* Optional spacing between images */
   cursor: pointer; /* Add this line */
+  transition: all 0.5s ease; /* Smooth transition for scaling and opacity */
+
 
 }
+.carousel-indicators {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.carousel-indicator {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.carousel-indicator.active {
+  background-color: var(--primary-color);
+}
+
 
 .carousel-image img {
   width: 100%;
@@ -92,4 +113,5 @@
     height: 35px;
     line-height: 35px;
   }
+  
 }

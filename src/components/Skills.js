@@ -5,7 +5,7 @@ const Skills = () => {
   const skillsCategories = {
     'Programming Languages': ['C', 'C++', 'Python', 'ReactJS', 'NodeJS'],
     'Tools & Platforms': ['Git', 'SQL', 'AWS', 'CMake', 'QT'],
-    'Operating Systems': ['Unix (Bash)', 'Windows']
+    'Operating Systems': ['Unix (Bash)', 'Windows','RISC-V']
   };
 
   return (

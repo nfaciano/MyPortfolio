@@ -7,7 +7,7 @@ function Education() {
       <h2>Education</h2>
       <h3>University of Rhode Island, Kingston, RI</h3>
       <p><strong>Bachelor of Science in Computer Science</strong>, Minor in Mathematics</p>
-      <p>GPA: 3.16, Major GPA: 3.29 - May 2024 (3 Year Graduation Track)</p>
+      <p>GPA: 3.16, Major GPA: 3.29 - May 2024 (3 Year Graduation)</p>
 
       <h3>Relevant Coursework:</h3>
       <ul>

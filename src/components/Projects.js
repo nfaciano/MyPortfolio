@@ -7,7 +7,7 @@ function Projects() {
       <h2>Projects</h2>
       <div className="project-card">
         <h3>Personal Project Portfolio</h3>
-        <p>Started Feb 3, 2024 - This React web app to display my development projects, highlighting programming skills and system design.</p>
+        <p>Started Feb 3, 2024 - Created this React web app to display my development projects, highlighting programming skills and system design.</p>
       </div>
       <div className="project-card">
         <h3>Scientific computing</h3>

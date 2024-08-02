@@ -19,15 +19,17 @@
   height: 30px; /* Height of the clickable arrow area */
   text-align: center;
   line-height: 30px; /* Vertically center the arrow icon */
+  padding: 0; /* Ensure no extra padding */
 }
 
 .left-nav {
-  left: 0; /* Align to the left edge of the carousel container */
+  left: 5px; /* Offset from the left edge */
 }
 
 .right-nav {
-  right: 0; /* Align to the right edge of the carousel container */
+  right: 5px; /* Offset from the right edge */
 }
+
 .carousel-images {
   display: flex;
   transition: transform 0.5s ease-out;
@@ -38,11 +40,10 @@
   max-width: calc(100% / 3); /* Ensuring the image does not exceed 1/3 */
   box-sizing: border-box;
   padding: 0 5px; /* Optional spacing between images */
-  cursor: pointer; /* Add this line */
-  transition: all 0.5s ease; /* Smooth transition for scaling and opacity */
-
-
+  cursor: pointer; /* Pointer cursor for images */
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth transition for scaling and opacity */
 }
+
 .carousel-indicators {
   text-align: center;
   padding-top: 10px;
@@ -59,17 +60,16 @@
 }
 
 .carousel-indicator.active {
-  background-color: var(--primary-color);
+  background-color: #007bff; /* Primary color for active indicator */
 }
-
 
 .carousel-image img {
   width: 100%;
   height: auto;
   border-radius: 10px;
   transition: transform 0.3s ease, opacity 0.3s ease;
-
 }
+
 .carousel-image.selected img {
   display: none; /* Hide the image when selected */
 }
@@ -84,35 +84,31 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 20px;
+  padding: 10px;
   box-sizing: border-box;
-  border-radius: 10px; /* Optional: to match the image border-radius */
+  border-radius: 10px; /* To match the image border-radius */
 }
 
 .carousel-image:hover img {
-  transform: scale(1.05); /* Slightly enlarges the image */
-  opacity: 0.9; /* Makes the image slightly transparent */
+  transform: scale(1.05); /* Slightly enlarge the image */
+  opacity: 0.9; /* Make the image slightly transparent */
 }
-
 
 /* Responsive Design: Adjustments for smaller screens */
 @media (max-width: 768px) {
-  .about-me-container {
-    margin: 30px 10px; /* Less margin on smaller screens */
-  }
-
-  .about-me-container h2 {
-    font-size: 2rem; /* Slightly smaller font size for the title */
-  }
-
-  .about-me-container h3 {
-    font-size: 1.5rem; /* Adjust subheading size */
+  .carousel {
+    margin: 15px auto; /* Reduced margin for smaller screens */
   }
 
   .carousel-nav {
-    width: 35px;
-    height: 35px;
-    line-height: 35px;
+    font-size: 1.8rem; /* Slightly smaller font size for navigation */
+    width: 25px; /* Smaller clickable area */
+    height: 25px;
+    line-height: 25px;
   }
-  
+
+  .left-nav, .right-nav {
+    left: 5px;
+    right: 5px;
+  }
 }

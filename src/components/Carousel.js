@@ -5,46 +5,27 @@ const Carousel = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedImageIndex, setSelectedImageIndex] = useState(null);
 
-  const imageWidth = 100 / 3; // Since we want to show 3 images at a time
-  const totalWidth = imageWidth * images.length;
+  const imagesToShow = 3; // Number of images to show at once
+  const imageWidth = 100 / imagesToShow;
 
   const goToPrev = () => {
-    setCurrentIndex((prevIndex) => {
-      // If at the start, wrap around to the last set of images
-      if (prevIndex === 0) {
-        return images.length - 3; // Assuming there are at least 3 images
-      }
-      return prevIndex - 1;
-    });
+    setCurrentIndex((prevIndex) => (prevIndex === 0 ? Math.max(0, images.length - imagesToShow) : prevIndex - 1));
   };
 
   const goToNext = () => {
-    setCurrentIndex((prevIndex) => {
-      // If at the end, wrap around to the beginning
-      if (prevIndex >= images.length - 3) {
-        return 0;
-      }
-      return prevIndex + 1;
-    });
+    setCurrentIndex((prevIndex) => (prevIndex >= images.length - imagesToShow ? 0 : prevIndex + 1));
   };
 
   const toggleDescription = (index) => {
     setSelectedImageIndex(selectedImageIndex === index ? null : index);
   };
 
-  // Calculate the correct offset for the translation
-  const getTransform = () => {
-    let offset = currentIndex * imageWidth;
-    if (offset > totalWidth) {
-      offset = totalWidth;
-    }
-    return offset;
-  };
+  const getTransform = () => `translateX(-${currentIndex * imageWidth}%)`;
 
   return (
     <div className="carousel">
       <button onClick={goToPrev} className="carousel-nav left-nav">&#10094;</button>
-      <div className="carousel-images" style={{ transform: `translateX(-${getTransform()}%)` }}>
+      <div className="carousel-images" style={{ transform: getTransform() }}>
         {images.map((image, index) => (
           <div
             key={index}

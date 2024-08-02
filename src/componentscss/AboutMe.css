@@ -31,21 +31,28 @@ h1, h2, h3, p {
 /* Style for the about me container */
 .about-me-container {
     max-width: 800px;
-    margin: 50px auto; /* Increase top and bottom margin */
-    background: var(--background-light);
-    padding: 50px; /* Increase padding for more space inside the container */
+    margin: 50px auto;
+    background: var(--background-color);
+    padding: 50px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adjusted for a deeper effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     color: var(--text-color);
-}
-
-/* Headings */
-.about-me-container h2 {
+    font-weight: var(--font-light);
+  }
+  
+  .about-me-container h2 {
     color: var(--primary-color);
     text-align: center;
     font-weight: var(--font-bold);
-    margin-bottom: 25px; /* More space after main heading */
-}
+    margin-bottom: 25px;
+  }
+  
+  .about-me-container p {
+    text-align: justify;
+    margin-bottom: 25px;
+    line-height: 1.8;
+  }
+  
 
 .about-me-container h3 {
     color: var(--accent-color);
@@ -54,14 +61,7 @@ h1, h2, h3, p {
 }
 
 /* Paragraph text styling */
-.about-me-container p {
-    font-weight: var(--font-light);
-    text-align: justify;
-    color: var(--text-light); /* Lighter color for a friendlier tone */
-    line-height: 1.8; /* Increased line height for better readability */
-    margin-bottom: 25px; /* Increase space between paragraphs */
 
-}
 
 /* Carousel section styling */
 .carousel-container {

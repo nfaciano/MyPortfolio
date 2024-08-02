@@ -3,19 +3,26 @@ import Carousel from './Carousel';
 import { travelPhotos, foodPhotos } from '../PhotoPaths/photopaths'; // Ensure the path is correct
 import '../componentscss/AboutMe.css'; // Ensure this path is correct
 
-
 function AboutMe() {
   return (
     <div className="about-me-container">
       <section className="intro-section">
         <h2>About Me</h2>
-        <p className="intro-text">Hello! My name is Nicholas Faciano. I am a dedicated student of computer science at the University of Rhode Island, graduating in only three years with a Bachelor of Science in Computer Science. My academic journey has been marked by a fascination with low-level system design and a passion for the C++ programming language, which offers a blend of traditional programming discipline with the power of modern computational capabilities.</p>
-      
-      <p>From building my first computer at the age of 14 to creating complex programs, my commitment to understanding and mastering object-oriented programming has shaped my approach to both problem-solving and project development. I thrive on the challenges presented by low-level programming, finding joy in the detailed process of bit manipulation and optimization. This enthusiasm for direct hardware interaction was further inspired by the success stories of software like Rollercoaster Tycoon, which demonstrated the potential of well-crafted low-level code.</p>
-      
-      <p>Looking forward, I will bring this meticulous attention to detail and problem solving abilities to my future projects and career in technology. Whether it's contributing to cutting-edge software or pioneering new systems that leverage the power of low-level programming, I'm eager to push the boundaries of what's possible.</p>
-      
-      <p>Beyond my academic and technical pursuits, I enjoy exploring the world and its diverse cultures through travel and food. Each journey offers a fresh perspective that enriches my worldview and each dish I prepare is a celebration of flavors and traditions from around the globe.</p>
+        <p className="intro-text">
+          Hi, I'm Nicholas Faciano, a recent graduate from the University of Rhode Island with a degree in Computer Science. I completed my studies in just three years, earning a spot on the Dean's List every semester. My passion lies in low-level programming and system design, where I love pushing the boundaries of what's possible with code. When I'm not diving into the intricacies of technology, you can find me exploring new cities, tasting diverse cuisines, or cooking up something delicious in the kitchen.
+        </p>
+
+        <p>
+          My tech journey began at 14 when I built my first computer. Since then, I've been captivated by the complexities of programming and the elegance of object-oriented design. I'm especially drawn to the challenges of low-level programming, whether it's fine-tuning bit manipulation or optimizing performance. Iconic software like RollerCoaster Tycoon has been a significant inspiration, showcasing the incredible potential of well-crafted code.
+        </p>
+
+        <p>
+          Looking ahead, I aim to bring the same attention to detail and problem-solving skills to my future projects and career. I'm excited about the prospect of working on cutting-edge software or developing new systems that redefine what's possible in technology.
+        </p>
+
+        <p>
+          Beyond my technical interests, I have a deep appreciation for exploring the world through travel and food. Each destination and dish offers a unique cultural experience, enriching my understanding and sparking my creativity. Cooking, in particular, has become a way for me to celebrate and share these flavors and traditions at home.
+        </p>
       </section>
       
       <section className="travels-section">
@@ -29,7 +36,9 @@ function AboutMe() {
       </section>
       
       <section className="closing-remarks">
-      <p>Whether I'm navigating through new landscapes or experimenting in the kitchen, the same curiosity and drive that fuel my academic endeavors also inspire my personal interests. These experiences continually shape who I am, both as a computer scientist and as a global citizen.</p>
+        <p>
+          Whether I'm exploring new cities or experimenting in the kitchen, the curiosity and passion that drive my academic pursuits also fuel my personal interests. These experiences continually shape who I am, both as an aspiring computer scientist and as a global citizen.
+        </p>
       </section>
     </div>
   );
